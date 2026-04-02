@@ -52,7 +52,7 @@ nav a {
     padding: 8px 16px;
     border-radius: 6px;
     font-weight: 600;
-    transition: background .2;
+    transition: background .2s;
 }
 
 nav a:hover {
