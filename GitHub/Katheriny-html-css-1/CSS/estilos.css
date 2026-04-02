@@ -102,3 +102,26 @@ ul li::before {
   left:     0;
   font-weight: 700;
 }
+
+/* 7. Links */
+a {
+  color:           #0284c7;
+  text-decoration: none;
+  font-weight:     600;
+  transition:      color .2s ease;
+}
+
+a:hover {
+  color:           #075985;
+  text-decoration: underline;
+}
+
+/* 8. Rodapé */
+footer {
+  background:   #1e293b;
+  color:        rgba(255,255,255,.7);
+  text-align:   center;
+  padding:      24px 20px;
+  font-size:    .9rem;
+  margin-top:   40px;
+}
