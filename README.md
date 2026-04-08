@@ -1,7 +1,7 @@
 # Katheriny-html-css
 
-git init
-git remote -v
-git add .
-git commit -m "Minha mensagem aqui"
+git init <br>
+git remote -v <br>
+git add . <br>
+git commit -m "Minha mensagem aqui" <br>
 git push origin main
