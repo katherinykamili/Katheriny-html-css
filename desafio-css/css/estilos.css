@@ -35,13 +35,13 @@ Body {
 
 /*3. Cabeçalho*/
 header {
-    background-color: #c5a055;
+
+   background: url(../img/coffeegraos.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    text-align: center;
-    padding: 40px 20px;
+    text-align: center; 
 }
 
 header h1 {
@@ -56,12 +56,9 @@ header p {
     opacity: 0.85;
 }
 
-.imagem1 {
-    background-image: url("assets/coffeegraos.png");
+img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    border-radius: 8px;
 }
 
 /*4.Navegação*/
