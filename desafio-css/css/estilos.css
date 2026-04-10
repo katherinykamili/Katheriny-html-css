@@ -7,7 +7,10 @@ Cor Secundária: #c5a055
 Cor de Destaque: #629657
 */
 
+
 @import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Noto+Serif+Khitan+Small+Script&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet');
+
 
 /*1.Box- sizing global - sempre comece com isso*/
 *,
@@ -20,17 +23,19 @@ Cor de Destaque: #629657
 
 /*2.Estilo base do documento*/
 Body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: 16PX;
+    font-family: "Noto Serif Khitan Small Script",
+        font-style: normal;
+    font-size: 18PX;
     line-height: 1.6;
     color: #3b2c1e;
     background-color: #FBfafc;
-    border-left: #fb8a01;;
+    border-left: #fb8a01;
+    ;
 }
 
 /*3. Cabeçalho*/
 header {
-    background-image: url('../assets/generated-image.jpg');
+    background-color: #c5a055;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -55,10 +60,8 @@ header p {
     background-image: url("assets/coffeegraos.png");
     width: 100%;
     height: 100%;
-    aspect-ratio: unset;
-    background-size: cover;
-    object-fit: cover;
-    overflow: hidden;
+    object-fit: contain;
+    border-radius: 8px;
 }
 
 /*4.Navegação*/
@@ -99,7 +102,7 @@ section {
 }
 
 h2 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: #975606;
     border-left: 4px solid #975606;
@@ -108,11 +111,12 @@ h2 {
 }
 
 h3 {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     font-weight: 500;
     color: #629657;
     padding-left: 12px;
     margin-bottom: 12px;
+    text-align: center;
 }
 
 .mapa-box {
@@ -149,7 +153,7 @@ iframe {
 
 .saiba-mais:hover {
     color: #975606;
-    transition:backgraund .2s ease;
+    transition: backgraund .2s ease;
     text-decoration: none;
 }
 
@@ -163,7 +167,7 @@ ul li {
     padding: 8px 0 8px 20px;
     border-bottom: 1px solid #e2e8f0;
     position: relative;
-    font-size: .95rem;
+    font-size: 1.1rem;
     color: #475569;
 }
 
