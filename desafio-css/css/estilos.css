@@ -30,7 +30,10 @@ Body {
 
 /*3. Cabeçalho*/
 header {
-    background-color: #c5a055;
+    background-image: url('../assets/generated-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
     text-align: center;
     padding: 40px 20px;
@@ -49,7 +52,7 @@ header p {
 }
 
 .imagem1 {
-    background-image: url("assets/generated-image.png");
+    background-image: url("assets/coffeegraos.png");
     width: 100%;
     height: 100%;
     aspect-ratio: unset;
