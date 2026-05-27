@@ -1,113 +1,134 @@
 /*css/estilos.css*/
 /*Aula 02 - CSS Fundamentos*/
 
+/* 1. VARIÁVEIS GLOBAIS */
+:root {
+  --cor-primaria: #6b3f2a;
+  --cor-secundaria: #a0623a;
+  --cor-destaque: #c9956c;
+  --cor-fundo: #fdf8f4;
+  --cor-fundo-suave: #f5ede4;
+  --cor-fundo-medio: #e8d5c4;
+  --cor-branco: #fffcf9;
+  --cor-texto: #3b2415;
+  --cor-texto-suave: #7a5c47;
+  --sombra: 0 15px 40px rgba(107, 63, 42, 0.10);
+  --borda: rgba(161, 98, 58, 0.18);
+}
+
 /*1.Box- sizing global - sempre comece com isso*/
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /*2.Estilo base do documento*/
-Body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    font-size: 16PX;
-    line-height: 1.6;
-    color: #1e293b;
-    background-color: #FBfafc;
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--cor-texto);
+  background:
+    radial-gradient(circle at top left, rgba(232, 213, 196, 0.80), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(201, 149, 108, 0.16), transparent 30%),
+    linear-gradient(180deg, #fffcf9 0%, #ffdfc4 100%);
 
-/* Footer grudado no rodapé */
-  display:        flex;
+  /* Footer grudado no rodapé */
+  display: flex;
   flex-direction: column;
-  min-height:     100vh;
+  min-height: 100vh;
 }
 
 /*3. Cabeçalho*/
 header {
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    background-color: #02b4c7;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
+  position: relative;
+  top: 0;
+  z-index: 999;
+  background: rgba(220, 162, 114, 0.88);
+  color: var(--cor-texto);
+  text-align: center;
+  padding: 40px 20px;
 }
 
 header h1 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 8px;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 header p {
-    font-size: 1.1rem;
-    opacity: 0.85;
+  font-size: 1.1rem;
+  opacity: 0.85;
 }
 
 /*4.Navegação*/
 nav {
-    background: #075985;
-    display: flex;
-    gap: 4px;
-    padding: 8px 16px;
+  background: var(--cor-primaria);
+  display: flex;
+  gap: 8px;
+  padding: 8px 16px;
+  text-align: center;
+  justify-content: center;
 }
 
 nav a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: background .2s;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 900;
+  transition: background .2s;
 }
 
 nav a:hover {
-    background: rgba(255, 255, 255, .15);
+  background: rgba(255, 255, 255, .15);
+  text-decoration: none;
 }
 
 /*5.Conteúdos Principais*/
 
 main {
-    max-width: 800px;
-    margin: 0 auto;
-    /* centraliza */
-    padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  /* centraliza */
+  padding: 40px 20px;
 }
 
 section {
-    padding: 90px 0;
+  padding: 90px 0;
 }
 
 h2 {
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    color: #0284c7;
-    line-height: 1.1;
-    border-left: 4px solid #0284c7;
-    padding-left: 12px;
-    margin-bottom: 12px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--cor-destaque);
+  line-height: 1.1;
+  border-left: 4px solid var(--cor-destaque);
+  padding-left: 12px;
+  margin-bottom: 12px;
 }
 
 /*6.Listas Personalizadas*/
 ul {
   list-style: none;
-  padding:    0;
+  padding: 0;
 }
 
 ul li {
-  padding:       8px 0 8px 20px;
+  padding: 8px 0 8px 20px;
   border-bottom: 1px solid #e2e8f0;
-  position:      relative;
-  font-size:     .95rem;
-  color:         #475569;
+  position: relative;
+  font-size: .95rem;
+  color: #475569;
 }
 
 ul li::before {
-  content:  "›";
-  color:    #0284c7;
+  content: "›";
+  color: var(--cor-destaque);
   position: absolute;
-  left:     0;
+  left: 0;
   font-weight: 700;
 }
 
@@ -122,25 +143,25 @@ ul li::before {
 }
 
 a {
-  color:           #0284c7;
+  color: var(--cor-destaque);
   text-decoration: none;
-  font-weight:     700;
-  font-size:       .95rem;
-  transition:      color .2s;
+  font-weight: 700;
+  font-size: .95rem;
+  transition: color .2s;
 }
 
 a:hover {
-  color:           #075985;
-  text-decoration: underline;
+  color: var(--cor-primaria);
+  text-decoration: none;
   transform: translateX(2px);
 }
 
 /* 8. Rodapé */
 footer {
-  background:   #1e293b;
-  color:        rgba(255,255,255,.7);
-  text-align:   center;
-  padding:      24px 20px;
-  font-size:    .9rem;
-  margin-top:   40px;
+  background: var(--cor-primaria);
+  color: rgba(255, 255, 255, .7);
+  text-align: center;
+  padding: 24px 20px;
+  font-size: .9rem;
+  margin-top: 40px;
 }
